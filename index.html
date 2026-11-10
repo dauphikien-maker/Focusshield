@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusShield v5.0 — Kỷ Nguyên Tập Trung Tuyệt Đối</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="FocusShield v5.0 - Giải pháp toàn diện giúp phong tỏa xao nhãng bằng chế độ khóa máy và bứt phá hiệu suất cùng Trợ lý AI thông minh.">
+  <meta name="author" content="Đậu Phi Kiên">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="logo_app.ico">
+  <link rel="icon" type="image/png" href="logo_app.png">
+  <link rel="apple-touch-icon" href="logo_app.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&family=Consolas&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Ambience -->
+  <canvas id="ambient-canvas"></canvas>
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+  <div class="cyber-grid-overlay"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="navbar">
+    <div class="container header-container">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-icon-wrapper">
+          <img src="logo_app.png" alt="FocusShield Logo" class="logo-img">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Focus<span class="gradient-text">Shield</span></span>
+          <span class="brand-badge">v5.0</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#hero" class="nav-link active">Trang Chủ</a>
+        <a href="#features" class="nav-link">Tính Năng</a>
+        <a href="#download" class="nav-link">Tải Về</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://github.com/dauphikien-maker/Focusshield/releases/download/V5.0/FocusShield_Setup_v5.exe" class="btn btn-primary-sm">Tải Ngay</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ========================================================
+         1. HERO SECTION
+    ======================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        
+        <div class="badge-pill">
+          <span class="pulsing-dot"></span>
+          <span class="badge-text">FocusShield v5.0 • Khóa Máy Chuyên Biệt & Trợ Lý AI</span>
+        </div>
+
+        <h1 class="hero-title">
+          FocusShield <span class="divider">—</span> <br>
+          <span class="gradient-text glow-text">Kỷ Nguyên Tập Trung Tuyệt Đối.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Giải pháp toàn diện giúp phong tỏa xao nhãng, biến máy tính của bạn thành không gian làm việc chuyên biệt và bứt phá hiệu suất với Trợ lý AI thông minh.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://github.com/dauphikien-maker/Focusshield/releases/download/V5.0/FocusShield_Setup_v5.exe" class="btn btn-hero-cta">
+            <span class="btn-glow-layer"></span>
+            <div class="btn-content">
+              <svg class="os-icon" viewBox="0 0 88 88" fill="currentColor">
+                <path d="M0 12.402l35.687-4.857.016 34.423-35.67.203zm35.67 33.529l.028 34.453L.028 75.48.016 45.728zm4.326-39.027L87.914 0v41.525l-47.918.356zm47.918 41.547v41.621L39.996 81.15V45.743z"/>
+              </svg>
+              <div class="btn-labels">
+                <span class="btn-main-text">Tải về FocusShield v5.0 (Windows)</span>
+                <span class="btn-sub-text">Bản cài đặt chính thức • Dung lượng ~27MB</span>
+              </div>
+              <svg class="arrow-right-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </div>
+          </a>
+
+          <a href="#features" class="btn btn-ghost-tech">
+            <span>Khám phá tính năng</span>
+          </a>
+        </div>
+
+        <!-- ========================================================
+             KHUNG MOCKUP GIAO DIỆN PHẦN MỀM
+             (Bên trái: Khóa máy tập trung | Bên phải: Trợ lý AI)
+        ======================================================== -->
+        <div class="hero-mockup-wrapper" id="preview">
+          <div class="mockup-frame">
+            
+            <!-- Window Titlebar -->
+            <div class="mockup-titlebar">
+              <div class="window-controls">
+                <span class="control-dot dot-close"></span>
+                <span class="control-dot dot-minimize"></span>
+                <span class="control-dot dot-maximize"></span>
+              </div>
+              <div class="window-title">
+                <img src="logo_app.png" alt="FocusShield" class="mockup-window-logo">
+                <span>FocusShield v5.0 — Không Gian Tập Trung & Trợ Lý AI</span>
+              </div>
+              <div class="window-status">
+                <span class="status-live-dot"></span>
+                <span id="mockupStatusText">SẴN SÀNG</span>
+              </div>
+            </div>
+
+            <!-- Giao diện trực quan bên trong phần mềm -->
+            <div class="mockup-body">
+              
+              <!-- Cột trái: Khóa máy tập trung -->
+              <div class="mockup-panel-lock">
+                <div class="panel-tag">CHẾ ĐỘ TẬP TRUNG</div>
+                <h3 class="panel-heading">Khóa Máy Làm Việc</h3>
+                <p class="panel-desc">Phong tỏa hoàn toàn xao nhãng để bạn chuyên tâm 100%.</p>
+
+                <div class="timer-display-box" id="timerBox">
+                  <div class="timer-digits" id="mockupTimer">45:00</div>
+                  <div class="timer-label">THỜI GIAN CÒN LẠI</div>
+                </div>
+
+                <div class="lock-control-actions">
+                  <button class="btn-lock-toggle" id="btnLockToggle">
+                    <span>🔒 Bắt Đầu Khóa Máy</span>
+                  </button>
+                </div>
+
+                <div class="lock-features-mini">
+                  <div class="mini-feat-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Khóa sạch ứng dụng gây xao nhãng</span>
+                  </div>
+                  <div class="mini-feat-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    <span>Rèn luyện tính kỷ luật tuyệt đối</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Cột phải: Trợ lý AI -->
+              <div class="mockup-panel-ai">
+                <div class="ai-header">
+                  <div class="ai-title-wrap">
+                    <span class="ai-spark-icon">✨</span>
+                    <strong>Trợ Lý AI Tích Hợp</strong>
+                  </div>
+                  <span class="ai-status-pill">Trực Tuyến</span>
+                </div>
+
+                <!-- Chat Messages -->
+                <div class="ai-chat-box" id="aiChatBox">
+                  <div class="chat-msg ai-msg">
+                    <div class="msg-sender">Trợ lý AI:</div>
+                    <div class="msg-text">
+                      Chào bạn! Cần giải bài hay thắc mắc kiến thức gì cứ nhập vào nhé, mình sẽ trả lời thẳng vào trọng tâm.
+                    </div>
+                  </div>
+
+                  <div class="chat-msg user-msg">
+                    <div class="msg-sender">Bạn:</div>
+                    <div class="msg-text">
+                      Giải thích ngắn gọn định luật bảo toàn năng lượng?
+                    </div>
+                  </div>
+
+                  <div class="chat-msg ai-msg">
+                    <div class="msg-sender">Trợ lý AI:</div>
+                    <div class="msg-text">
+                      Năng lượng không tự nhiên sinh ra cũng không tự nhiên mất đi, nó chỉ chuyển hóa từ dạng này sang dạng khác hoặc truyền từ vật này sang vật khác.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Input Chat -->
+                <div class="ai-input-wrap">
+                  <input type="text" id="aiQuestionInput" class="ai-input" placeholder="Hỏi AI bất kỳ bài tập hoặc thắc mắc nào..." autocomplete="off">
+                  <button class="ai-send-btn" id="aiSendBtn">Gửi ➤</button>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="mockup-reflection"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         2. FEATURES SECTION (TÍNH NĂNG NỔI BẬT)
+    ======================================================== -->
+    <section class="features-section" id="features">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-tag">TÍNH NĂNG CỐT LÕI</div>
+          <h2 class="section-title">
+            Tất Cả Những Gì Bạn Cần Để <br>
+            <span class="gradient-text glow-text">Làm Việc Không Xao Nhãng</span>
+          </h2>
+          <p class="section-subtitle">
+            Tối giản, mạnh mẽ và tập trung vào hai yếu tố quan trọng nhất: Khóa máy kỷ luật và Trí tuệ nhân tạo hỗ trợ tức thì.
+          </p>
+        </div>
+
+        <div class="features-grid">
+          
+          <!-- FEATURE 1: Chế Độ Khóa Máy -->
+          <div class="feature-card glass-card">
+            <div class="card-icon-box icon-blue">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Chế Độ Khóa Máy</h3>
+            <p class="feature-desc">
+              Khóa toàn bộ các ứng dụng và thông báo gây xao nhãng, đưa hệ thống vào trạng thái làm việc và học tập với sự tập trung 100%.
+            </p>
+            <ul class="feature-bullets">
+              <li>Phong tỏa toàn diện mọi cám dỗ trên máy tính</li>
+              <li>Tạo không gian làm việc chuyên sâu, kỷ luật</li>
+              <li>Chỉ mở lại sau khi kết thúc phiên tập trung</li>
+            </ul>
+          </div>
+
+          <!-- FEATURE 2: Trợ Lý AI Tích Hợp -->
+          <div class="feature-card glass-card">
+            <div class="card-icon-box icon-purple">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <h3 class="feature-title">Trợ Lý AI Tích Hợp</h3>
+            <p class="feature-desc">
+              Trí tuệ nhân tạo thông minh được nhúng trực tiếp vào giao diện, sẵn sàng hỗ trợ tư duy, giải đáp thắc mắc và xử lý bài tập phức tạp trong chớp mắt.
+            </p>
+            <ul class="feature-bullets">
+              <li>Trả lời trực tiếp ngay trong giao diện tập trung</li>
+              <li>Ngắn gọn, súc tích, đi thẳng vào đáp án</li>
+              <li>Hỗ trợ mọi thắc mắc học tập và làm việc</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         3. DOWNLOAD SECTION (KHU VỰC TẢI VỀ - TRỌNG TÂM)
+    ======================================================== -->
+    <section class="download-section" id="download">
+      <div class="container">
+        
+        <div class="download-card glass-card text-center">
+          <div class="download-badge">PHIÊN BẢN CHÍNH THỨC v5.0</div>
+          
+          <h2 class="download-title">
+            Tải Về FocusShield v5.0
+          </h2>
+          <p class="download-subtitle">
+            Cài đặt nhanh chóng để bắt đầu phiên làm việc tập trung đầu tiên của bạn.
+          </p>
+
+          <!-- NÚT TẢI XUỐNG FILE FocusShield_Setup_v5.exe -->
+          <div class="download-btn-wrap">
+            <a href="https://github.com/dauphikien-maker/Focusshield/releases/download/V5.0/FocusShield_Setup_v5.exe" class="btn btn-download" id="mainDownloadBtn">
+              <div class="download-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+              </div>
+              <div class="download-text">
+                <span class="dl-title">TẢI XUỐNG FOCUSSHIELD v5.0 (SETUP.EXE)</span>
+                <span class="dl-sub">Click để tải file cài đặt trực tiếp về máy tính</span>
+              </div>
+            </a>
+          </div>
+
+          <!-- Ghi chú theo đúng yêu cầu -->
+          <p class="download-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>Tương thích tối ưu cho hệ điều hành Windows</span>
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       4. FOOTER (CHÂN TRANG)
+  ======================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-icon-wrapper">
+              <img src="logo_app.png" alt="FocusShield Logo" class="logo-img">
+            </div>
+            <span class="brand-name">Focus<span class="gradient-text">Shield</span></span>
+          </div>
+          <p class="footer-text">
+            Giải pháp phong tỏa xao nhãng và bứt phá hiệu suất cùng Trợ lý AI.
+          </p>
+        </div>
+
+        <div class="footer-contact">
+          <div class="footer-contact-title">Hỗ Trợ Người Dùng</div>
+          <!-- Email hỗ trợ -->
+          <a href="mailto:dauphikien2010@gmail.com" class="footer-email">dauphikien2010@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <!-- Bản quyền chuẩn theo yêu cầu -->
+        <p class="copyright-text">
+          &copy; 2026 Designed &amp; Developed by <strong>Đậu Phi Kiên</strong>.
+        </p>
+        <a href="#hero" class="back-to-top">Lên đầu trang ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification khi bấm tải -->
+  <div class="toast-notification" id="toastNotification">
+    <div class="toast-icon">🚀</div>
+    <div class="toast-body">
+      <div class="toast-title">Bắt Đầu Tải Xuống!</div>
+      <div class="toast-desc">File <strong>FocusShield_Setup_v5.exe</strong> đang được tải về.</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
